@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed; // A float is any number 
+    // "FixedUpdate" and "Update" are basically the same 
+
+    // A float is any number  
+    // A int is only whole numbers 
+    // A string is like text and stuff
+
+    public float moveSpeed; 
     public Rigidbody2D rb;
 
     private Vector2 moveDirection;
@@ -19,6 +25,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed); 
     }
 }
