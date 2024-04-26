@@ -4,22 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed; // A float is a number, even decimals
+    public float moveSpeed; // A float is any number 
     public Rigidbody2D rb;
 
     private Vector2 moveDirection;
 
     private void Update()
-    {
-        ProcessInput(); // calls the "ProcessInputs function" every frame
-    }
-
-    private void FixedUpdate()
-    {
-        Move(); // calls the "move function" every frame
-    }
-
-    public void ProcessInput() // This is the "ProcessInputs function"
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
@@ -27,8 +17,8 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = new Vector2(moveX, moveY).normalized;
     }
 
-    private void Move() // This is the "move function"
+    private void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed); // this line is irrelevent 
+        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
     }
 }
