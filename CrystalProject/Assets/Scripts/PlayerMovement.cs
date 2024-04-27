@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         
+
         //moveDirection = new Vector2(moveX, ).normalized;
     }
 
