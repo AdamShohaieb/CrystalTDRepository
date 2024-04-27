@@ -18,9 +18,8 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
-
-        moveDirection = new Vector2(moveX, moveY).normalized;
+        
+        //moveDirection = new Vector2(moveX, ).normalized;
     }
 
     private void FixedUpdate()
@@ -28,5 +27,3 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed); 
     }
 }
-
-// iejwjijeijwijeij debussy is the best
