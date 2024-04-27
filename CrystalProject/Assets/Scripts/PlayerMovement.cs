@@ -28,3 +28,5 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed); 
     }
 }
+
+// iejwjijeijwijeij debussy is the best
